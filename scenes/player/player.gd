@@ -1,4 +1,4 @@
-extends Node2D
+extends CharacterBody2D
 
 const speed: int = 500
 
@@ -9,7 +9,8 @@ func _ready():
 func _process(delta):
 	# movement input
 	var movement: Vector2 = Input.get_vector("left", "right", "up", "down")
-	position += movement * speed * delta
+	velocity = movement * speed
+	move_and_slide()
 
 	# shooting input
 	if Input.is_action_pressed("fire1"):
