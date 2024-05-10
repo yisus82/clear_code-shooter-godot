@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://dblf6wastdesv"]
+[gd_scene load_steps=5 format=3 uid="uid://dblf6wastdesv"]
 
 [ext_resource type="Script" path="res://scenes/levels/level.gd" id="1_k0wdq"]
 [ext_resource type="PackedScene" uid="uid://csbyfe8pao2rv" path="res://scenes/player/player.tscn" id="2_ht730"]
 [ext_resource type="PackedScene" uid="uid://exmugtfwwmcy" path="res://scenes/objects/bed.tscn" id="3_02k1j"]
+[ext_resource type="PackedScene" uid="uid://ds5ueh62tkgh1" path="res://scenes/objects/billboard.tscn" id="4_mrm3i"]
 
 [node name="Level" type="Node2D"]
 script = ExtResource("1_k0wdq")
@@ -12,3 +13,6 @@ position = Vector2(306, 482)
 
 [node name="Bed" parent="." instance=ExtResource("3_02k1j")]
 position = Vector2(827, 189)
+
+[node name="Billboard" parent="." instance=ExtResource("4_mrm3i")]
+position = Vector2(569, 615)
