@@ -1,9 +1,5 @@
 extends Node2D
 
 
-func _ready():
-	pass
-
-
-func _process(delta):
-	pass
+func _on_gate_player_entered_gate(body):
+	print(body.name + " has entered the gate")
