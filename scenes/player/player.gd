@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 signal player_shoot_laser(pos)
-signal player_shoot_grenade
+signal player_shoot_grenade(pos)
 
 const speed: int = 500
 var can_shoot_laser: bool = true
@@ -19,7 +19,7 @@ func _process(_delta):
 		can_shoot_laser = false
 		$LaserTimer.start()
 	if Input.is_action_pressed("fire2") and can_shoot_grenade:
-		player_shoot_grenade.emit()
+		player_shoot_grenade.emit($GrenadeSpawnPoint.global_position)
 		can_shoot_grenade = false
 		$GrenadeTimer.start()
 

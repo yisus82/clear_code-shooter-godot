@@ -27,5 +27,8 @@ one_shot = true
 [node name="LaserSpawnPoint" type="Marker2D" parent="."]
 position = Vector2(20, -135)
 
+[node name="GrenadeSpawnPoint" type="Marker2D" parent="."]
+position = Vector2(53, -80)
+
 [connection signal="timeout" from="LaserTimer" to="." method="_on_laser_timer_timeout"]
 [connection signal="timeout" from="GrenadeTimer" to="." method="_on_grenade_timer_timeout"]
