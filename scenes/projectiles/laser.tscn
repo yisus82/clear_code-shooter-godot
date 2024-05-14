@@ -5,14 +5,17 @@
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_wj6nc"]
 radius = 4.0
-height = 82.0
+height = 52.0
 
 [node name="Laser" type="Area2D"]
 script = ExtResource("1_n5yjf")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-56.2487, -1.36592e-06)
+rotation = 1.5708
 texture = ExtResource("1_qrn0o")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, -39)
+position = Vector2(2.08165e-12, 2.08165e-12)
+rotation = 1.5708
 shape = SubResource("CapsuleShape2D_wj6nc")
