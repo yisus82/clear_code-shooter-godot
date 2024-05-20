@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://dblf6wastdesv"]
+[gd_scene load_steps=14 format=3 uid="uid://dblf6wastdesv"]
 
 [ext_resource type="Script" path="res://scenes/levels/level.gd" id="1_k0wdq"]
 [ext_resource type="Texture2D" uid="uid://cmcc8336hpf18" path="res://graphics/ground/stones.png" id="2_a2gbc"]
@@ -10,6 +10,26 @@
 [ext_resource type="Texture2D" uid="uid://ck8amq5upub4" path="res://graphics/decals/moss/moss_3.png" id="6_vh5fs"]
 [ext_resource type="Texture2D" uid="uid://bcx3n1ki6cjvo" path="res://graphics/decals/moss/moss_4.png" id="7_1hdn0"]
 [ext_resource type="Texture2D" uid="uid://dvrsc7aom7b2e" path="res://graphics/decals/moss/moss_5.png" id="8_pu0qp"]
+[ext_resource type="Texture2D" uid="uid://c76jiabkfqjs4" path="res://graphics/tilesets/outside_walls.png" id="9_ug3gr"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_pf1rw"]
+resource_name = "walls"
+texture = ExtResource("9_ug3gr")
+texture_region_size = Vector2i(390, 390)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+0:3/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_unbcp"]
+tile_size = Vector2i(390, 390)
+sources/0 = SubResource("TileSetAtlasSource_pf1rw")
 
 [node name="Level" type="Node2D"]
 script = ExtResource("1_k0wdq")
@@ -25,7 +45,7 @@ region_rect = Rect2(2.08165e-12, 2.08165e-12, 10000, 5000)
 
 [node name="Deocration" type="Sprite2D" parent="Ground"]
 modulate = Color(0.862745, 1, 0.784314, 1)
-position = Vector2(-1830, 981)
+position = Vector2(-1976, 1511)
 texture = ExtResource("3_58yn0")
 
 [node name="Moss1" type="Sprite2D" parent="Ground"]
@@ -47,6 +67,11 @@ texture = ExtResource("7_1hdn0")
 [node name="Moss5" type="Sprite2D" parent="Ground"]
 position = Vector2(1551, 802)
 texture = ExtResource("8_pu0qp")
+
+[node name="TileMap" type="TileMap" parent="Ground"]
+tile_set = SubResource("TileSet_unbcp")
+format = 2
+layer_0/tile_data = PackedInt32Array(131069, 131072, 1, 196605, 0, 2, 262141, 0, 2, 327677, 0, 2, 131066, 0, 0, 131067, 65536, 0, 131068, 65536, 0, 393213, 65536, 2, 393214, 65536, 0, 393215, 65536, 0, 327680, 65536, 0, 327681, 131072, 0)
 
 [node name="Gate" parent="." instance=ExtResource("2_iaqd8")]
 position = Vector2(552, -529)
