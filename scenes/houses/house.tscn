@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://mdsdjppxhvwb"]
+[gd_scene load_steps=6 format=3 uid="uid://mdsdjppxhvwb"]
 
 [ext_resource type="Texture2D" uid="uid://cu1niiomdgxmq" path="res://graphics/tilesets/interior.png" id="1_ler8u"]
+[ext_resource type="PackedScene" uid="uid://c7rxmegacrdf1" path="res://scenes/objects/simple_light.tscn" id="2_32ncj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_njreb"]
 size = Vector2(3664, 2874)
@@ -205,3 +206,7 @@ layer_1/name = "Outer Walls"
 layer_1/tile_data = PackedInt32Array(196612, 327680, 2, -262140, 327680, 0, -196613, 196608, 0, 262139, 196608, 2, 262140, 262144, 2, 262141, 262144, 2, 262142, 262144, 2, 262143, 262144, 2, 196608, 262144, 2, 196609, 262144, 2, -196604, 327680, 1, -131068, 327680, 1, -65532, 327680, 1, 4, 327680, 1, 65540, 327680, 1, 131076, 327680, 1, -196612, 262144, 0, -196611, 262144, 0, -196610, 262144, 0, -196609, 262144, 0, -262144, 262144, 0, -262143, 262144, 0, -262142, 262144, 0, -262141, 262144, 0, -131077, 196608, 1, -65541, 196608, 1, -5, 196608, 1, 65531, 196608, 1, 131067, 196608, 1, 196603, 196608, 1, 196610, 393216, 3, 196611, 393216, 4)
 layer_2/name = "Inner Walls"
 layer_2/tile_data = PackedInt32Array(196609, 327680, 8, 131073, 65536, 6, 65537, 65536, 6, 1, 65536, 6, -65535, 65536, 7, -65536, 0, 6, -1, 0, 6, -2, 0, 6, -3, 262144, 7, -5, 262144, 7, -4, 393216, 7, -131077, 262144, 7, -196604, 393216, 7, -131076, 0, 6, -131075, 0, 6, -131074, 0, 6, -131073, 196608, 8, -196608, 0, 6, -196607, 0, 6, -196606, 0, 6, -196605, 0, 6, -196609, 327680, 6)
+
+[node name="SimpleLight" parent="." instance=ExtResource("2_32ncj")]
+position = Vector2(1680, 0)
+rotation = 1.5708
