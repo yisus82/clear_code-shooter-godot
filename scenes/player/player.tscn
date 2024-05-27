@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://csbyfe8pao2rv"]
+[gd_scene load_steps=9 format=3 uid="uid://csbyfe8pao2rv"]
 
 [ext_resource type="Texture2D" uid="uid://dieyj3vyiylvt" path="res://graphics/player/player.png" id="1_bt0vd"]
 [ext_resource type="Script" path="res://scenes/player/player.gd" id="1_f1wee"]
@@ -24,6 +24,9 @@ scale_min = 0.3
 scale_max = 0.8
 color = Color(0.117647, 1, 1, 0.392157)
 color_ramp = SubResource("GradientTexture1D_ei4c0")
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_lbajs"]
+polygon = PackedVector2Array(24, -61, 33, -55, 36, -48, 45, -40, 45, -36, 50, -29, 62, -25, 77, -10, 89, -10, 98, -4, 110, -2, 112, 1, 125, 3, 124, 9, 129, 6, 133, 10, 135, 19, 133, 31, 129, 34, 124, 32, 123, 37, 113, 38, 109, 36, 101, 44, 98, 45, 96, 52, 95, 53, 63, 53, 58, 41, 44, 41, 24, 48, 6, 58, -11, 60, -21, 60, -31, 56, -38, 43, -42, 35, -50, 26, -51, 21, -49, 19, -49, 16, -56, 11, -59, -13, -58, -21, -52, -30, -51, -36, -43, -44, -31, -46, -29, -45, -26, -49, -20, -54, -12, -56, -10, -55, 0, -59, 12, -58)
 
 [node name="Player" type="CharacterBody2D"]
 collision_mask = 31
@@ -58,6 +61,9 @@ process_material = SubResource("ParticleProcessMaterial_v0mgg")
 texture = ExtResource("3_0n4et")
 lifetime = 0.2
 one_shot = true
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="."]
+occluder = SubResource("OccluderPolygon2D_lbajs")
 
 [connection signal="timeout" from="LaserTimer" to="." method="_on_laser_timer_timeout"]
 [connection signal="timeout" from="GrenadeTimer" to="." method="_on_grenade_timer_timeout"]
