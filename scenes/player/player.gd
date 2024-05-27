@@ -19,6 +19,7 @@ func _process(_delta):
 
 	# shooting input
 	if Input.is_action_pressed("fire1") and can_shoot_laser:
+		$GPUParticles2D.emitting = true
 		var pos: Vector2 = $LaserSpawnPoint.global_position
 		var direction: Vector2 = (mouse_pos - position).normalized()
 		player_shoot_laser.emit(pos, direction)
