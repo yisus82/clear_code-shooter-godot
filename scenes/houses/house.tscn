@@ -321,23 +321,25 @@ layer_1/tile_data = PackedInt32Array(196612, 327680, 2, -262140, 327680, 0, -196
 layer_2/name = "Inner Walls"
 layer_2/tile_data = PackedInt32Array(196609, 327680, 8, 131073, 65536, 6, 65537, 65536, 6, 1, 65536, 6, -65535, 65536, 7, -65536, 0, 6, -1, 0, 6, -2, 0, 6, -3, 262144, 7, -5, 262144, 7, -4, 393216, 7, -131077, 262144, 7, -196604, 393216, 7, -131076, 0, 6, -131075, 0, 6, -131074, 0, 6, -131073, 196608, 8, -196608, 0, 6, -196607, 0, 6, -196606, 0, 6, -196605, 0, 6, -196609, 327680, 6)
 
-[node name="SimpleLight" parent="." instance=ExtResource("2_32ncj")]
+[node name="Lights" type="Node2D" parent="."]
+
+[node name="SimpleLight" parent="Lights" instance=ExtResource("2_32ncj")]
 position = Vector2(1680, 0)
 rotation = 1.5708
 
-[node name="SimpleLight2" parent="." instance=ExtResource("2_32ncj")]
+[node name="SimpleLight2" parent="Lights" instance=ExtResource("2_32ncj")]
 position = Vector2(-1674, -635)
 rotation = -1.5708
 
-[node name="SimpleLight3" parent="." instance=ExtResource("2_32ncj")]
+[node name="SimpleLight3" parent="Lights" instance=ExtResource("2_32ncj")]
 position = Vector2(-194, -162)
 
-[node name="WallLight" parent="." instance=ExtResource("3_mt6ri")]
+[node name="WallLight" parent="Lights" instance=ExtResource("3_mt6ri")]
 position = Vector2(1653, 669)
 rotation = -1.5708
 
-[node name="WallLight2" parent="." instance=ExtResource("3_mt6ri")]
+[node name="WallLight2" parent="Lights" instance=ExtResource("3_mt6ri")]
 position = Vector2(-20, 1261)
 
-[node name="WallLight3" parent="." instance=ExtResource("3_mt6ri")]
+[node name="WallLight3" parent="Lights" instance=ExtResource("3_mt6ri")]
 position = Vector2(-1118, 1258)
