@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://dblf6wastdesv"]
+[gd_scene load_steps=19 format=3 uid="uid://dblf6wastdesv"]
 
 [ext_resource type="Script" path="res://scenes/levels/level.gd" id="1_k0wdq"]
 [ext_resource type="Texture2D" uid="uid://cmcc8336hpf18" path="res://graphics/ground/stones.png" id="2_a2gbc"]
@@ -14,6 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://dga82wy68fylx" path="res://graphics/tilesets/soil.png" id="10_a3mau"]
 [ext_resource type="PackedScene" uid="uid://mdsdjppxhvwb" path="res://scenes/houses/house.tscn" id="11_nxdue"]
 [ext_resource type="PackedScene" uid="uid://bm0whhwborhv6" path="res://scenes/objects/steam_vent.tscn" id="12_h3ame"]
+[ext_resource type="PackedScene" uid="uid://ddmft5dcemgx0" path="res://scenes/objects/light_fan_animation.tscn" id="13_7buyj"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_pf1rw"]
 resource_name = "walls"
@@ -108,6 +109,11 @@ rotation = -2.0944
 
 [node name="SteamVent" parent="Ground" instance=ExtResource("12_h3ame")]
 position = Vector2(-158, 498)
+
+[node name="LightFanAnimation" parent="Ground" instance=ExtResource("13_7buyj")]
+position = Vector2(-3731, 1352)
+scale = Vector2(1.5, 1.5)
+autoplay = "default"
 
 [node name="Gate" parent="." instance=ExtResource("2_iaqd8")]
 position = Vector2(552, -529)
