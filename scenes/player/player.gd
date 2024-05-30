@@ -3,7 +3,8 @@ extends CharacterBody2D
 signal player_shoot_laser(pos: Vector2, direction: Vector2)
 signal player_shoot_grenade(pos: Vector2, direction: Vector2)
 
-const speed: int = 500
+@export var max_speed: int = 500
+var speed: int = max_speed
 var can_shoot_laser: bool = true
 var can_shoot_grenade: bool = true
 
