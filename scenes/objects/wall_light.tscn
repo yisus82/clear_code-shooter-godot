@@ -7,6 +7,8 @@
 polygon = PackedVector2Array(212, -12, 218, -9, 219, -2, 223, 1, 224, 36, 209, 48, 209, 25.9336, 209, -11)
 
 [node name="WallLight" type="StaticBody2D"]
+collision_layer = 4
+collision_mask = 11
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 polygon = PackedVector2Array(-419, 15, -355, -64, -288, -83, 290, -83, 367, -51, 415, 9, 394, 61, 372, 74, -393, 74)
