@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://dblf6wastdesv"]
+[gd_scene load_steps=6 format=3 uid="uid://dblf6wastdesv"]
 
 [ext_resource type="Script" path="res://scenes/levels/level.gd" id="1_k0wdq"]
 [ext_resource type="PackedScene" uid="uid://d4gas5bwjomxd" path="res://scenes/projectiles/laser.tscn" id="2_dp3u7"]
 [ext_resource type="PackedScene" uid="uid://csbyfe8pao2rv" path="res://scenes/player/player.tscn" id="2_ht730"]
 [ext_resource type="PackedScene" uid="uid://dg0c0xc7uh7gb" path="res://scenes/projectiles/grenade.tscn" id="3_4p80b"]
+[ext_resource type="PackedScene" uid="uid://cl67jmb2ddkds" path="res://scenes/ui/ui.tscn" id="5_n1gp3"]
 
 [node name="Level" type="Node2D"]
 script = ExtResource("1_k0wdq")
@@ -24,6 +25,8 @@ position_smoothing_enabled = true
 rotation_smoothing_enabled = true
 
 [node name="Lights" type="Node2D" parent="."]
+
+[node name="UI" parent="." instance=ExtResource("5_n1gp3")]
 
 [connection signal="player_shoot_grenade" from="Player" to="." method="_on_player_player_shoot_grenade"]
 [connection signal="player_shoot_laser" from="Player" to="." method="_on_player_player_shoot_laser"]
