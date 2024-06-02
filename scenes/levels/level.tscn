@@ -1,10 +1,14 @@
-[gd_scene load_steps=3 format=3 uid="uid://dblf6wastdesv"]
+[gd_scene load_steps=5 format=3 uid="uid://dblf6wastdesv"]
 
 [ext_resource type="Script" path="res://scenes/levels/level.gd" id="1_k0wdq"]
+[ext_resource type="PackedScene" uid="uid://d4gas5bwjomxd" path="res://scenes/projectiles/laser.tscn" id="2_dp3u7"]
 [ext_resource type="PackedScene" uid="uid://csbyfe8pao2rv" path="res://scenes/player/player.tscn" id="2_ht730"]
+[ext_resource type="PackedScene" uid="uid://dg0c0xc7uh7gb" path="res://scenes/projectiles/grenade.tscn" id="3_4p80b"]
 
 [node name="Level" type="Node2D"]
 script = ExtResource("1_k0wdq")
+laser_scene = ExtResource("2_dp3u7")
+grenade_scene = ExtResource("3_4p80b")
 
 [node name="Ground" type="Node2D" parent="."]
 
