@@ -19,14 +19,16 @@ func _process(_delta):
 	look_at(mouse_pos)
 
 	# shooting input
-	if Input.is_action_pressed("fire1") and can_shoot_laser:
+	if Input.is_action_pressed("fire1") and can_shoot_laser and Globals.laser_amount > 0:
+		Globals.laser_amount -= 1
 		$GPUParticles2D.emitting = true
 		var pos: Vector2 = $LaserSpawnPoint.global_position
 		var direction: Vector2 = (mouse_pos - position).normalized()
 		player_shoot_laser.emit(pos, direction)
 		can_shoot_laser = false
 		$LaserTimer.start()
-	if Input.is_action_pressed("fire2") and can_shoot_grenade:
+	if Input.is_action_pressed("fire2") and can_shoot_grenade and Globals.grenade_amount > 0:
+		Globals.grenade_amount -= 1
 		var pos: Vector2 = $GrenadeSpawnPoint.global_position
 		var direction: Vector2 = (mouse_pos - position).normalized()
 		player_shoot_grenade.emit(pos, direction)
