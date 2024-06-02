@@ -7,5 +7,5 @@ func _process(delta):
 	velocity = direction * speed
 	move_and_slide()
 
-func hit():
+func hit() -> void:
 	print("damage")

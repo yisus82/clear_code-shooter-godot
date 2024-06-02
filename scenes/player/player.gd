@@ -35,8 +35,8 @@ func _process(_delta):
 		can_shoot_grenade = false
 		$GrenadeTimer.start()
 
-func _on_laser_timer_timeout():
+func _on_laser_timer_timeout() -> void:
 	can_shoot_laser = true
 
-func _on_grenade_timer_timeout():
+func _on_grenade_timer_timeout() -> void:
 	can_shoot_grenade = true
