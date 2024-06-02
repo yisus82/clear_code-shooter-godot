@@ -10,9 +10,7 @@ var green: Color = Color("6bbfa3")
 var red: Color = Color("e60000")
 
 func _ready():
-	update_laser_text()
-	update_grenade_text()
-	update_health_bar()
+	update_stats()
 	
 func update_color(amount: int, label: Label, icon: TextureRect) -> void:
 	if amount <= 0:
@@ -21,6 +19,11 @@ func update_color(amount: int, label: Label, icon: TextureRect) -> void:
 	else:
 		label.modulate = green
 		icon.modulate = green
+		
+func update_stats() -> void:
+	update_laser_text()
+	update_grenade_text()
+	update_health_bar()
 
 func update_laser_text() -> void:
 	laser_label.text = str(Globals.laser_amount)

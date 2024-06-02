@@ -30,3 +30,4 @@ rotation_smoothing_enabled = true
 
 [connection signal="player_shoot_grenade" from="Player" to="." method="_on_player_player_shoot_grenade"]
 [connection signal="player_shoot_laser" from="Player" to="." method="_on_player_player_shoot_laser"]
+[connection signal="update_stats" from="Player" to="." method="_on_player_update_stats"]

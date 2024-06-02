@@ -18,3 +18,7 @@ func _on_player_player_shoot_grenade(pos: Vector2, direction: Vector2) -> void:
 	grenade.linear_velocity = direction * grenade.speed
 	$Projectiles.add_child(grenade)
 	$UI.update_grenade_text()
+
+
+func _on_player_update_stats():
+	$UI.update_stats()
