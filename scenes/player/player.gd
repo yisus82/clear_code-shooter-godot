@@ -2,7 +2,6 @@ extends CharacterBody2D
 
 signal player_shoot_laser(pos: Vector2, direction: Vector2)
 signal player_shoot_grenade(pos: Vector2, direction: Vector2)
-signal update_stats
 
 @export var max_speed: int = 500
 var speed: int = max_speed
@@ -41,14 +40,3 @@ func _on_laser_timer_timeout() -> void:
 
 func _on_grenade_timer_timeout() -> void:
 	can_shoot_grenade = true
-
-func add_item(item_type: String) -> void:
-	if item_type == "laser":
-		Globals.laser_amount += 10
-	elif item_type == "grenade":
-		Globals.grenade_amount += 5
-	elif item_type == "health":
-		Globals.player_health += 25
-		if Globals.player_health > 100:
-			Globals.player_health = 100
-	update_stats.emit()

@@ -15,10 +15,13 @@ func _ready():
 func _process(delta):
 	rotation += rotation_speed * delta
 
-
-func _on_body_entered(body: Node2D) -> void:
-	if type == "health" and Globals.player_health == 100:
+func _on_body_entered(_body: Node2D) -> void:
+	if type == "health" and Globals.health == 100:
 		return
-	if "add_item" in body:
-		body.add_item(type)
-		queue_free()
+	if type == "laser":
+		Globals.laser_amount += 10
+	elif type == "grenade":
+		Globals.grenade_amount += 5
+	elif type == "health":
+		Globals.health += 25
+	queue_free()

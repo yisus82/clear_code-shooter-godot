@@ -10,6 +10,9 @@ var green: Color = Color("6bbfa3")
 var red: Color = Color("e60000")
 
 func _ready():
+	Globals.connect("laser_amount_changed", update_laser_text)
+	Globals.connect("grenade_amount_changed", update_grenade_text)
+	Globals.connect("health_changed", update_health_bar)
 	update_stats()
 	
 func update_color(amount: int, label: Label, icon: TextureRect) -> void:
@@ -34,4 +37,4 @@ func update_grenade_text() -> void:
 	update_color(Globals.grenade_amount, grenade_label, grenade_icon)
 	
 func update_health_bar() -> void:
-	health_bar.value = Globals.player_health
+	health_bar.value = Globals.health
