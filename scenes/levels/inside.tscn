@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://2lba1vyeokce"]
+[gd_scene load_steps=17 format=3 uid="uid://2lba1vyeokce"]
 
 [ext_resource type="PackedScene" uid="uid://dblf6wastdesv" path="res://scenes/levels/level.tscn" id="1_qs04j"]
 [ext_resource type="Texture2D" uid="uid://bni5yfnrqsitk" path="res://graphics/ground/dirt.png" id="2_7flxe"]
@@ -14,6 +14,7 @@
 [ext_resource type="PackedScene" uid="uid://exmugtfwwmcy" path="res://scenes/objects/bed.tscn" id="7_n4lyr"]
 [ext_resource type="PackedScene" uid="uid://b18hh5u7h3n42" path="res://scenes/container/toilet.tscn" id="8_eb283"]
 [ext_resource type="PackedScene" uid="uid://c0ljwqh83jmjj" path="res://scenes/container/crate.tscn" id="9_hodit"]
+[ext_resource type="PackedScene" uid="uid://bm0whhwborhv6" path="res://scenes/objects/steam_vent.tscn" id="10_3eucp"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_64j3x"]
 size = Vector2(393, 714)
@@ -188,6 +189,34 @@ rotation = 1.5708
 position = Vector2(3537, 1688)
 rotation = 1.5708
 
+[node name="SteamVents" type="Node2D" parent="Ground" index="7"]
+metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
+
+[node name="SteamVent" parent="Ground/SteamVents" index="0" instance=ExtResource("10_3eucp")]
+position = Vector2(1978, -169)
+
+[node name="SteamVent2" parent="Ground/SteamVents" index="1" instance=ExtResource("10_3eucp")]
+position = Vector2(220, -1962)
+
+[node name="SteamVent3" parent="Ground/SteamVents" index="2" instance=ExtResource("10_3eucp")]
+position = Vector2(-2666, -638)
+
+[node name="SteamVent4" parent="Ground/SteamVents" index="3" instance=ExtResource("10_3eucp")]
+position = Vector2(-3486, 2373)
+
+[node name="SteamVent5" parent="Ground/SteamVents" index="4" instance=ExtResource("10_3eucp")]
+position = Vector2(-495, 2385)
+
+[node name="SteamVent6" parent="Ground/SteamVents" index="5" instance=ExtResource("10_3eucp")]
+position = Vector2(2293, 1991)
+
+[node name="Items" parent="." index="1"]
+metadata/_edit_lock_ = true
+
+[node name="Projectiles" parent="." index="2"]
+metadata/_edit_lock_ = true
+
 [node name="Player" parent="." index="3"]
 position = Vector2(3936, 365)
 metadata/_edit_group_ = true
@@ -202,6 +231,7 @@ color = Color(0.784314, 0.843137, 0.843137, 1)
 blend_mode = 1
 
 [node name="ExitGateArea" type="Area2D" parent="." index="5"]
+metadata/_edit_lock_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ExitGateArea" index="0"]
 position = Vector2(4374.5, 390)
