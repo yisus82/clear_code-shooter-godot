@@ -3,6 +3,11 @@ class_name LevelParent
 
 @export var laser_scene: PackedScene
 @export var grenade_scene: PackedScene
+@export var item_scene: PackedScene
+
+func _ready():
+	for container in get_tree().get_nodes_in_group("Container"):
+		container.connect("open", _on_container_opened)
 
 func _on_player_player_shoot_laser(pos: Vector2, direction: Vector2) -> void:
 	var laser: Area2D = laser_scene.instantiate() as Area2D
@@ -16,3 +21,9 @@ func _on_player_player_shoot_grenade(pos: Vector2, direction: Vector2) -> void:
 	grenade.position = pos
 	grenade.linear_velocity = direction * grenade.speed
 	$Projectiles.add_child(grenade)
+
+func _on_container_opened(pos: Vector2, direction: Vector2) -> void:
+	var item: Area2D = item_scene.instantiate() as Area2D
+	item.position = pos
+	item.direction = direction
+	$Items.add_child.call_deferred(item)

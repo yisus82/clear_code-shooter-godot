@@ -1,5 +1,7 @@
 extends Area2D
 
+var direction: Vector2
+var distance: int = randi_range(150, 250)
 var rotation_speed: int = 4
 var types: Array[String] = ["laser", "laser", "laser", "laser", "laser", "grenade", "grenade", "health", "health", "health"]
 var type: String = types[randi()%len(types)]
@@ -11,6 +13,9 @@ func _ready():
 		$Sprite2D.modulate = Color(0.1, 0.8, 0.1)
 	elif type == "health":
 		$Sprite2D.modulate = Color(0.8, 0.2, 0.1)
+	var target_position: Vector2 = position + direction * distance
+	var movement_tween: Tween = create_tween()
+	movement_tween.tween_property(self, "position", target_position, 0.5)
 
 func _process(delta):
 	rotation += rotation_speed * delta
