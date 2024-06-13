@@ -13,6 +13,8 @@ laser_scene = ExtResource("2_dp3u7")
 grenade_scene = ExtResource("3_4p80b")
 item_scene = ExtResource("4_5ot4a")
 
+[node name="Decals" type="Node2D" parent="."]
+
 [node name="Ground" type="Node2D" parent="."]
 
 [node name="Items" type="Node2D" parent="."]
