@@ -23,6 +23,8 @@ item_scene = ExtResource("4_5ot4a")
 
 [node name="Projectiles" type="Node2D" parent="."]
 
+[node name="Enemies" type="Node2D" parent="."]
+
 [node name="Player" parent="." instance=ExtResource("2_ht730")]
 position = Vector2(774, 504)
 rotation = -1.5708

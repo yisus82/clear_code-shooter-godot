@@ -202,60 +202,60 @@ rotation = -3.14159
 
 [node name="Toilets" type="Node2D" parent="Ground" index="5"]
 
-[node name="Toilet" parent="Ground/Toilets" index="0" instance=ExtResource("8_eb283")]
+[node name="Toilet" parent="Ground/Toilets" index="0" groups=["Container"] instance=ExtResource("8_eb283")]
 position = Vector2(-10, 1492)
 
-[node name="Toilet2" parent="Ground/Toilets" index="1" instance=ExtResource("8_eb283")]
+[node name="Toilet2" parent="Ground/Toilets" index="1" groups=["Container"] instance=ExtResource("8_eb283")]
 position = Vector2(-3814, -1435)
 rotation = 1.5708
 
-[node name="Toilet3" parent="Ground/Toilets" index="2" instance=ExtResource("8_eb283")]
+[node name="Toilet3" parent="Ground/Toilets" index="2" groups=["Container"] instance=ExtResource("8_eb283")]
 position = Vector2(-3833, 344)
 rotation = 1.5708
 
 [node name="Crates" type="Node2D" parent="Ground" index="6"]
 
-[node name="Crate" parent="Ground/Crates" index="0" instance=ExtResource("9_hodit")]
+[node name="Crate" parent="Ground/Crates" index="0" groups=["Container"] instance=ExtResource("9_hodit")]
 position = Vector2(1007, -1950)
 
-[node name="Crate2" parent="Ground/Crates" index="1" instance=ExtResource("9_hodit")]
+[node name="Crate2" parent="Ground/Crates" index="1" groups=["Container"] instance=ExtResource("9_hodit")]
 position = Vector2(-1570, -1962)
 
-[node name="Crate3" parent="Ground/Crates" index="2" instance=ExtResource("9_hodit")]
+[node name="Crate3" parent="Ground/Crates" index="2" groups=["Container"] instance=ExtResource("9_hodit")]
 position = Vector2(-1177, -447)
 
-[node name="Crate4" parent="Ground/Crates" index="3" instance=ExtResource("9_hodit")]
+[node name="Crate4" parent="Ground/Crates" index="3" groups=["Container"] instance=ExtResource("9_hodit")]
 position = Vector2(-4477, -1577)
 
-[node name="Crate5" parent="Ground/Crates" index="4" instance=ExtResource("9_hodit")]
+[node name="Crate5" parent="Ground/Crates" index="4" groups=["Container"] instance=ExtResource("9_hodit")]
 position = Vector2(-4374, 1954)
 rotation = 3.14159
 
-[node name="Crate6" parent="Ground/Crates" index="5" instance=ExtResource("9_hodit")]
+[node name="Crate6" parent="Ground/Crates" index="5" groups=["Container"] instance=ExtResource("9_hodit")]
 position = Vector2(-2903, 5477)
 rotation = 3.14159
 
-[node name="Crate7" parent="Ground/Crates" index="6" instance=ExtResource("9_hodit")]
+[node name="Crate7" parent="Ground/Crates" index="6" groups=["Container"] instance=ExtResource("9_hodit")]
 position = Vector2(-2141, 5477)
 rotation = 3.14159
 
-[node name="Crate8" parent="Ground/Crates" index="7" instance=ExtResource("9_hodit")]
+[node name="Crate8" parent="Ground/Crates" index="7" groups=["Container"] instance=ExtResource("9_hodit")]
 position = Vector2(-1359, 5473)
 rotation = 3.14159
 
-[node name="Crate9" parent="Ground/Crates" index="8" instance=ExtResource("9_hodit")]
+[node name="Crate9" parent="Ground/Crates" index="8" groups=["Container"] instance=ExtResource("9_hodit")]
 position = Vector2(-591, 5475)
 rotation = 3.14159
 
-[node name="Crate10" parent="Ground/Crates" index="9" instance=ExtResource("9_hodit")]
+[node name="Crate10" parent="Ground/Crates" index="9" groups=["Container"] instance=ExtResource("9_hodit")]
 position = Vector2(-360, 4849)
 rotation = 1.5708
 
-[node name="Crate11" parent="Ground/Crates" index="10" instance=ExtResource("9_hodit")]
+[node name="Crate11" parent="Ground/Crates" index="10" groups=["Container"] instance=ExtResource("9_hodit")]
 position = Vector2(-370, 3050)
 rotation = 1.5708
 
-[node name="Crate12" parent="Ground/Crates" index="11" instance=ExtResource("9_hodit")]
+[node name="Crate12" parent="Ground/Crates" index="11" groups=["Container"] instance=ExtResource("9_hodit")]
 position = Vector2(3537, 1688)
 rotation = 1.5708
 
