@@ -313,7 +313,7 @@ position = Vector2(-2157, 2782)
 texture = ExtResource("17_b1n5c")
 
 [node name="Small2" type="Sprite2D" parent="Infestation" index="7"]
-position = Vector2(-2039, 2677)
+position = Vector2(-2195, 2679)
 texture = ExtResource("18_beoj8")
 
 [node name="Small3" type="Sprite2D" parent="Infestation" index="8"]
@@ -331,6 +331,43 @@ texture = ExtResource("21_4x5a3")
 [node name="Spikes2" type="Sprite2D" parent="Infestation" index="11"]
 position = Vector2(-2321, 2677)
 texture = ExtResource("21_4x5a3")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Infestation" index="12"]
+collision_layer = 4
+collision_mask = 11
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Infestation/StaticBody2D" index="0"]
+polygon = PackedVector2Array(-549, 3693, -669, 3873, -552, 4058, -534, 3870)
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="Infestation" index="13"]
+collision_layer = 4
+collision_mask = 11
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Infestation/StaticBody2D2" index="0"]
+polygon = PackedVector2Array(-3487, 5231, -3178, 5543, -3565, 5543)
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="Infestation" index="14"]
+collision_layer = 4
+collision_mask = 11
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Infestation/StaticBody2D3" index="0"]
+polygon = PackedVector2Array(-3208, 2717, -3171, 2780, -2976, 2683, -3008, 2634)
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="Infestation" index="15"]
+collision_layer = 4
+collision_mask = 11
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Infestation/StaticBody2D4" index="0"]
+position = Vector2(843, -61)
+polygon = PackedVector2Array(-3205, 2697, -3171, 2780, -2988, 2900, -2990, 2710)
+
+[node name="StaticBody2D5" type="StaticBody2D" parent="Infestation" index="16"]
+collision_layer = 4
+collision_mask = 11
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Infestation/StaticBody2D5" index="0"]
+position = Vector2(-395, 1080)
+polygon = PackedVector2Array(-3205, 2697, -3132, 2980, -3078, 2948, -3056, 2717)
 
 [node name="Items" parent="." index="3"]
 metadata/_edit_lock_ = true
