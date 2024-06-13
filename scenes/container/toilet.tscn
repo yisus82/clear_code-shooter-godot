@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://ccl1x0sxl4rpf" path="res://graphics/objects/lid.png" id="4_fdj5v"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_yio1b"]
-radius = 99.0454
+radius = 80.0062
 
 [node name="Toilet" instance=ExtResource("1_sng5v")]
 script = ExtResource("2_oy11l")
@@ -15,10 +15,12 @@ script = ExtResource("2_oy11l")
 shape = SubResource("CircleShape2D_yio1b")
 
 [node name="BaseSprite" parent="." index="1"]
+scale = Vector2(0.8, 0.8)
 texture = ExtResource("2_5l6g2")
 
 [node name="LidSprite" parent="." index="2"]
 position = Vector2(0, 32)
+scale = Vector2(0.8, 0.8)
 texture = ExtResource("4_fdj5v")
 
 [node name="Marker2D" type="Marker2D" parent="SpawnPositions" index="0"]
