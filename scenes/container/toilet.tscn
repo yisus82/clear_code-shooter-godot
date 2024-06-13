@@ -20,3 +20,5 @@ texture = ExtResource("2_5l6g2")
 [node name="LidSprite" parent="." index="2"]
 position = Vector2(0, 32)
 texture = ExtResource("4_fdj5v")
+
+[node name="Marker2D" type="Marker2D" parent="SpawnPositions" index="0"]
