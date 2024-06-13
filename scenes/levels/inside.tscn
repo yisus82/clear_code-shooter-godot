@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://2lba1vyeokce"]
+[gd_scene load_steps=28 format=3 uid="uid://2lba1vyeokce"]
 
 [ext_resource type="PackedScene" uid="uid://dblf6wastdesv" path="res://scenes/levels/level.tscn" id="1_qs04j"]
 [ext_resource type="Texture2D" uid="uid://bni5yfnrqsitk" path="res://graphics/ground/dirt.png" id="2_7flxe"]
@@ -17,6 +17,15 @@
 [ext_resource type="PackedScene" uid="uid://b18hh5u7h3n42" path="res://scenes/container/toilet.tscn" id="8_eb283"]
 [ext_resource type="PackedScene" uid="uid://c0ljwqh83jmjj" path="res://scenes/container/crate.tscn" id="9_hodit"]
 [ext_resource type="PackedScene" uid="uid://bm0whhwborhv6" path="res://scenes/objects/steam_vent.tscn" id="10_3eucp"]
+[ext_resource type="Texture2D" uid="uid://d3gbnrl7dmobc" path="res://graphics/objects/infestation/corner.png" id="13_x0ja8"]
+[ext_resource type="Texture2D" uid="uid://bfx30njxga4dd" path="res://graphics/objects/infestation/large.png" id="14_45fin"]
+[ext_resource type="Texture2D" uid="uid://di8ex5m2majfa" path="res://graphics/objects/infestation/line.png" id="15_0k5gx"]
+[ext_resource type="Texture2D" uid="uid://mpdtcjblsjub" path="res://graphics/objects/infestation/medium.png" id="16_rjidc"]
+[ext_resource type="Texture2D" uid="uid://0jbc6j23i4qs" path="res://graphics/objects/infestation/small.png" id="17_b1n5c"]
+[ext_resource type="Texture2D" uid="uid://bcrj412re0mk7" path="res://graphics/objects/infestation/small_2.png" id="18_beoj8"]
+[ext_resource type="Texture2D" uid="uid://cgbltxrdpeemk" path="res://graphics/objects/infestation/small_3.png" id="19_vm6ph"]
+[ext_resource type="Texture2D" uid="uid://cwuq6s4vqx0wk" path="res://graphics/objects/infestation/small_4.png" id="20_u10l5"]
+[ext_resource type="Texture2D" uid="uid://cr378qlmy0gjr" path="res://graphics/objects/infestation/spikes.png" id="21_4x5a3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_64j3x"]
 size = Vector2(393, 714)
@@ -270,10 +279,60 @@ position = Vector2(-495, 2385)
 [node name="SteamVent6" parent="Ground/SteamVents" index="5" instance=ExtResource("10_3eucp")]
 position = Vector2(2293, 1991)
 
-[node name="Items" parent="." index="2"]
+[node name="Infestation" parent="." index="2"]
+metadata/_edit_group_ = true
 metadata/_edit_lock_ = true
 
-[node name="Projectiles" parent="." index="3"]
+[node name="Corner" type="Sprite2D" parent="Infestation" index="0"]
+position = Vector2(-3349, 5404)
+rotation = -3.14159
+texture = ExtResource("13_x0ja8")
+
+[node name="Large" type="Sprite2D" parent="Infestation" index="1"]
+position = Vector2(-3522, 5490)
+texture = ExtResource("14_45fin")
+
+[node name="Large2" type="Sprite2D" parent="Infestation" index="2"]
+position = Vector2(-3526, 3848)
+texture = ExtResource("14_45fin")
+
+[node name="Line" type="Sprite2D" parent="Infestation" index="3"]
+position = Vector2(-544, 3873)
+texture = ExtResource("15_0k5gx")
+
+[node name="Medium" type="Sprite2D" parent="Infestation" index="4"]
+position = Vector2(-3513, 4016)
+texture = ExtResource("16_rjidc")
+
+[node name="Medium2" type="Sprite2D" parent="Infestation" index="5"]
+position = Vector2(-3020, 2668)
+texture = ExtResource("16_rjidc")
+
+[node name="Small" type="Sprite2D" parent="Infestation" index="6"]
+position = Vector2(-2157, 2782)
+texture = ExtResource("17_b1n5c")
+
+[node name="Small2" type="Sprite2D" parent="Infestation" index="7"]
+position = Vector2(-2039, 2677)
+texture = ExtResource("18_beoj8")
+
+[node name="Small3" type="Sprite2D" parent="Infestation" index="8"]
+position = Vector2(-2249, 2748)
+texture = ExtResource("19_vm6ph")
+
+[node name="Small4" type="Sprite2D" parent="Infestation" index="9"]
+position = Vector2(-658, 3890)
+texture = ExtResource("20_u10l5")
+
+[node name="Spikes" type="Sprite2D" parent="Infestation" index="10"]
+position = Vector2(-3168, 2740)
+texture = ExtResource("21_4x5a3")
+
+[node name="Spikes2" type="Sprite2D" parent="Infestation" index="11"]
+position = Vector2(-2321, 2677)
+texture = ExtResource("21_4x5a3")
+
+[node name="Items" parent="." index="3"]
 metadata/_edit_lock_ = true
 
 [node name="DirectionalLight2D" type="DirectionalLight2D" parent="." index="4"]
@@ -287,7 +346,10 @@ metadata/_edit_lock_ = true
 position = Vector2(4374.5, 390)
 shape = SubResource("RectangleShape2D_64j3x")
 
-[node name="Player" parent="." index="6"]
+[node name="Projectiles" parent="." index="6"]
+metadata/_edit_lock_ = true
+
+[node name="Player" parent="." index="7"]
 position = Vector2(3936, 365)
 metadata/_edit_group_ = true
 metadata/_edit_lock_ = true
@@ -296,7 +358,7 @@ metadata/_edit_lock_ = true
 texture = ExtResource("6_0x6yk")
 texture_scale = 3.0
 
-[node name="Lights" parent="." index="7"]
+[node name="Lights" parent="." index="8"]
 metadata/_edit_lock_ = true
 metadata/_edit_group_ = true
 

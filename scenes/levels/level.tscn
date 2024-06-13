@@ -17,6 +17,8 @@ item_scene = ExtResource("4_5ot4a")
 
 [node name="Ground" type="Node2D" parent="."]
 
+[node name="Infestation" type="Node2D" parent="."]
+
 [node name="Items" type="Node2D" parent="."]
 
 [node name="Projectiles" type="Node2D" parent="."]
