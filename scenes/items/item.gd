@@ -14,8 +14,10 @@ func _ready():
 	elif type == "health":
 		$Sprite2D.modulate = Color(0.8, 0.2, 0.1)
 	var target_position: Vector2 = position + direction * distance
-	var movement_tween: Tween = create_tween()
-	movement_tween.tween_property(self, "position", target_position, 0.5)
+	var tween: Tween = create_tween()
+	tween.set_parallel()
+	tween.tween_property(self, "scale", Vector2(1, 1), 0.3).from(Vector2(0, 0))
+	tween.tween_property(self, "position", target_position, 0.5)
 
 func _process(delta):
 	rotation += rotation_speed * delta
