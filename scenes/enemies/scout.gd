@@ -24,5 +24,8 @@ func _on_attack_area_body_entered(_body: Node2D) -> void:
 func _on_attack_area_body_exited(_body: Node2D) -> void:
 	is_player_nearby = false
 
-func _on_laser_cooldown_timeout():
+func _on_laser_cooldown_timeout() -> void:
 	can_shoot_laser = true
+
+func hit() -> void:
+	print("scout was hit")

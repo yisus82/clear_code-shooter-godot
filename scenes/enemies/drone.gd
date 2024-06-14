@@ -8,4 +8,4 @@ func _process(delta):
 	move_and_slide()
 
 func hit() -> void:
-	print("damage")
+	print("drone was hit")
