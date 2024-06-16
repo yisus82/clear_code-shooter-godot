@@ -14,7 +14,7 @@ var grenade_amount: int = 5:
 		grenade_amount = value
 		grenade_amount_changed.emit()
 
-var health: int = 60:
+var health: int = 100:
 	set(value):
 		health = value
 		if health > 100:

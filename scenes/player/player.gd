@@ -7,6 +7,7 @@ signal player_shoot_grenade(pos: Vector2, direction: Vector2)
 var speed: int = max_speed
 var can_shoot_laser: bool = true
 var can_shoot_grenade: bool = true
+var is_vulnerable: bool = true
 
 func _process(_delta):
 	# movement input
@@ -23,18 +24,18 @@ func _process(_delta):
 	if Input.is_action_pressed("fire1") and can_shoot_laser and Globals.laser_amount > 0:
 		Globals.laser_amount -= 1
 		$GPUParticles2D.emitting = true
-		var pos: Vector2 = $LaserSpawnPoint.global_position
+		var pos: Vector2 = $SpawnPoints/LaserSpawnPoint.global_position
 		var direction: Vector2 = (mouse_pos - position).normalized()
 		player_shoot_laser.emit(pos, direction)
 		can_shoot_laser = false
-		$LaserTimer.start()
+		$Timers/LaserTimer.start()
 	if Input.is_action_pressed("fire2") and can_shoot_grenade and Globals.grenade_amount > 0:
 		Globals.grenade_amount -= 1
-		var pos: Vector2 = $GrenadeSpawnPoint.global_position
+		var pos: Vector2 = $SpawnPoints/GrenadeSpawnPoint.global_position
 		var direction: Vector2 = (mouse_pos - position).normalized()
 		player_shoot_grenade.emit(pos, direction)
 		can_shoot_grenade = false
-		$GrenadeTimer.start()
+		$Timers/GrenadeTimer.start()
 
 func _on_laser_timer_timeout() -> void:
 	can_shoot_laser = true
@@ -42,5 +43,13 @@ func _on_laser_timer_timeout() -> void:
 func _on_grenade_timer_timeout() -> void:
 	can_shoot_grenade = true
 
+func _on_hit_timer_timeout() -> void:
+	is_vulnerable = true
+
 func hit() -> void:
-	print("player was hit")
+	if is_vulnerable:
+		is_vulnerable = false
+		$Timers/HitTimer.start()
+		Globals.health -= 10
+		if Globals.health <= 0:
+			queue_free()

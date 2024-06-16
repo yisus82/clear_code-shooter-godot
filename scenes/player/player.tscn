@@ -40,18 +40,12 @@ texture = ExtResource("1_bt0vd")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_0q1w4")
 
-[node name="LaserTimer" type="Timer" parent="."]
-wait_time = 0.5
-one_shot = true
+[node name="SpawnPoints" type="Node2D" parent="."]
 
-[node name="GrenadeTimer" type="Timer" parent="."]
-wait_time = 2.0
-one_shot = true
-
-[node name="LaserSpawnPoint" type="Marker2D" parent="."]
+[node name="LaserSpawnPoint" type="Marker2D" parent="SpawnPoints"]
 position = Vector2(135, 20)
 
-[node name="GrenadeSpawnPoint" type="Marker2D" parent="."]
+[node name="GrenadeSpawnPoint" type="Marker2D" parent="SpawnPoints"]
 position = Vector2(135, 20)
 
 [node name="GPUParticles2D" type="GPUParticles2D" parent="."]
@@ -65,5 +59,18 @@ one_shot = true
 [node name="LightOccluder2D" type="LightOccluder2D" parent="."]
 occluder = SubResource("OccluderPolygon2D_lbajs")
 
-[connection signal="timeout" from="LaserTimer" to="." method="_on_laser_timer_timeout"]
-[connection signal="timeout" from="GrenadeTimer" to="." method="_on_grenade_timer_timeout"]
+[node name="Timers" type="Node" parent="."]
+
+[node name="LaserTimer" type="Timer" parent="Timers"]
+wait_time = 0.5
+one_shot = true
+
+[node name="GrenadeTimer" type="Timer" parent="Timers"]
+wait_time = 2.0
+one_shot = true
+
+[node name="HitTimer" type="Timer" parent="Timers"]
+
+[connection signal="timeout" from="Timers/LaserTimer" to="." method="_on_laser_timer_timeout"]
+[connection signal="timeout" from="Timers/GrenadeTimer" to="." method="_on_grenade_timer_timeout"]
+[connection signal="timeout" from="Timers/HitTimer" to="." method="_on_hit_timer_timeout"]
